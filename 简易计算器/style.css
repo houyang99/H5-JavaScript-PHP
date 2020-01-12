@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc{
+    border-radius: 20px;
+    background-color: #17181c;
+}
+
+/* 显示部分 */
+.display-box{
+    overflow: hidden;
+}
+.display{
+    width: 250px;
+    /* height: 50px; */
+    height: 5em;
+    padding: 5px;
+    margin: 15px 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #5c5661;
+    overflow: auto;
+}
+.display::-webkit-scrollbar{
+    display: none;
+}
+.display span{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-align: right;
+    white-space:nowrap;
+    /* padding: 10px 0; */
+}
+#formula{
+    /* flex: 1; */
+    font-size: 1rem;
+    color: #888;
+    padding-bottom: 0.5rem;
+    float: right;
+}
+#result{
+    /* flex: 3; */
+    font-size: 2em;
+    color: #fff;
+}
+
+/* 操作部分 */
+table{
+    padding: 5px;
+}
+table td{
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+}
+table input{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: #fff;
+    /* 背景透明 */
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+}
+.operat,.ac,.parentheses{
+    background-color: #404145;
+}
+.operat:not(.equal_sign):hover,.ac:hover,.parentheses:hover{
+    border: 1px solid #aaa;
+}
+.operat:active,.ac:active,.parentheses:active,.equal_sign:active{
+    box-shadow: 0 0 15px #fff;
+}
+table input:not(.operat):hover{
+    border: 1px solid #aaa;
+}
+table input:not(.operat):active{
+    background-color: #404145;
+}
+.equal_sign:hover{
+    background-image: linear-gradient(90deg,#707de9,#fa6689);
+}
+.equal_sign{
+    border-radius: 50px;
+    background-image: linear-gradient(90deg,#fa6689,#707de9);
+}
