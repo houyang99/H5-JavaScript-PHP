@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" async></script>
+    <title>计算器</title>
+</head>
+<body>
+    <div class="calc">
+        <div class="display">
+            <span id="formula">输入//1234按下=切换背景</span>
+            <span id="result"></span>
+        </div>
+        <table>
+            <tr>
+                <td><input type="button" value="AC" class="ac"></td>
+                <td><input type="button" value="( )" class="parentheses"></td>
+                <td><input type="button" value="%" class="operat"></td>
+                <td><input type="button" value="/" class="operat"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7"></td>
+                <td><input type="button" value="8"></td>
+                <td><input type="button" value="9"></td>
+                <td><input type="button" value="*" class="operat"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4"></td>
+                <td><input type="button" value="5" id="number5"></td>
+                <td><input type="button" value="6"></td>
+                <td><input type="button" value="-" class="operat"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1"></td>
+                <td><input type="button" value="2"></td>
+                <td><input type="button" value="3"></td>
+                <td><input type="button" value="+" class="operat"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0"></td>
+                <td><input type="button" value="."></td>
+                <td colspan="2"><input type="button" value="=" class="equal_sign"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
